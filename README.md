@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rikas/tracinho.svg)](https://travis-ci.org/rikas/tracinho)
+
 tracinho
 ========
 
