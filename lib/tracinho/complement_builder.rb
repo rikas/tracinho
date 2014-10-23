@@ -15,7 +15,7 @@ module Tracinho
     #  ComplementBuilder.new(Word.new('passa-mos')).build
     #  # => #<Tracinho::Word:0x007f8a9b10f270 @text="passamos">
     def build
-      text = @word.has_dash? ? remove_dash(@word.text) : add_dash(@word.text)
+      text = @word.hyphenated? ? remove_dash(@word.text) : add_dash(@word.text)
 
       Word.new(text)
     end
@@ -31,7 +31,7 @@ module Tracinho
       when /os$/
         text.insert(-4, '-')
       else
-        text.insert(-3, '-').sub("s#{'-'}", '-')
+        text.insert(-3, '-').sub('s-', '-')
       end
     end
   end
