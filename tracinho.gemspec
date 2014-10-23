@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{This gem converts words with dash in the version without it and
     vice-versa. It also gets the verb name from a word and gives the full grammar classification of
     the verb.}
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/rikas/tracinho'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
