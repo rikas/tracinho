@@ -20,11 +20,11 @@ describe Word do
 
   describe '#complement' do
     it 'returns the complement of a word' do
-      word = Word.new('fizes-te')
+      word = Word.new('mataste')
 
       complement = word.complement
 
-      expect(complement.to_s).to eq('fizeste')
+      expect(complement.to_s).to eq('matas-te')
     end
   end
 

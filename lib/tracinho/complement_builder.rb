@@ -7,8 +7,6 @@ module Tracinho
 
     # Builds the complementary word.
     #
-    # Examples:
-    #
     #  ComplementBuilder.new(Word.new('fizeste')).build
     #  # => #<Tracinho::Word:0x007f8a9b0ba928 @text="fize-te">
     #
@@ -31,7 +29,7 @@ module Tracinho
       when /os$/
         text.insert(-4, '-')
       else
-        text.insert(-3, '-').sub('s-', '-')
+        text.insert(-3, '-')
       end
     end
   end
