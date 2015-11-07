@@ -7,20 +7,20 @@ describe Word do
   describe '#hyphenated?' do
     it 'returns true if the word has a hyphen' do
       hyphenated.each do |w|
-        expect(Word.new(w).hyphenated?).to be_truthy
+        expect(described_class.new(w).hyphenated?).to be_truthy
       end
     end
 
     it 'returns false if the word does not have a hyphen' do
       not_hyphenated.each do |w|
-        expect(Word.new(w).hyphenated?).to be_falsey
+        expect(described_class.new(w).hyphenated?).to be_falsey
       end
     end
   end
 
   describe '#complement' do
     it 'returns the complement of a word' do
-      word = Word.new('mataste')
+      word = described_class.new('mataste')
 
       complement = word.complement
 
@@ -28,10 +28,23 @@ describe Word do
     end
   end
 
+  describe '#grammar_class' do
+    it 'returns the class of a word' do
+      word = described_class.new('matas-te')
+
+      classification = word.grammar_class
+
+      klass = 'Conjugação pronominal reflexa da segunda pessoa do presente do indicativo do verbo' \
+              ' matar.'
+
+      expect(classification).to eq(klass)
+    end
+  end
+
   describe '#to_s' do
     it 'returns the text attribute of the word' do
       (hyphenated + not_hyphenated).each do |w|
-        expect(Word.new(w).to_s).to eq(w)
+        expect(described_class.new(w).to_s).to eq(w)
       end
     end
   end
