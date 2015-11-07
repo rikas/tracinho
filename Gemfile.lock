@@ -54,12 +54,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
-  pry
-  rake
-  rspec
-  rubocop
-  simplecov
+  bundler (~> 1.10)
+  pry (~> 0.10)
+  rake (~> 10.4)
+  rspec (~> 3.3)
+  rubocop (~> 0.35)
+  simplecov (~> 0.10)
   tracinho!
 
 BUNDLED WITH
