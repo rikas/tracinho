@@ -1,63 +1,66 @@
 PATH
   remote: .
   specs:
-    tracinho (0.0.1)
+    tracinho (0.1.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    ast (2.0.0)
-    astrolabe (1.3.0)
-      parser (>= 2.2.0.pre.3, < 3.0)
+    ast (2.1.0)
+    astrolabe (1.3.1)
+      parser (~> 2.2)
     coderay (1.1.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    json (1.8.3)
     method_source (0.8.2)
-    multi_json (1.10.1)
-    parser (2.2.0.pre.5)
+    parser (2.2.3.0)
       ast (>= 1.1, < 3.0)
-      slop (~> 3.4, >= 3.4.5)
-    powerpack (0.0.9)
-    pry (0.10.1)
+    powerpack (0.1.1)
+    pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rainbow (2.0.0)
-    rake (10.3.2)
-    rspec (3.1.0)
-      rspec-core (~> 3.1.0)
-      rspec-expectations (~> 3.1.0)
-      rspec-mocks (~> 3.1.0)
-    rspec-core (3.1.7)
-      rspec-support (~> 3.1.0)
-    rspec-expectations (3.1.2)
+    rake (10.4.2)
+    rspec (3.3.0)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+    rspec-core (3.3.2)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.1.0)
-    rspec-mocks (3.1.3)
-      rspec-support (~> 3.1.0)
-    rspec-support (3.1.2)
-    rubocop (0.26.1)
+      rspec-support (~> 3.3.0)
+    rspec-mocks (3.3.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
+    rubocop (0.35.0)
       astrolabe (~> 1.3)
-      parser (>= 2.2.0.pre.4, < 3.0)
-      powerpack (~> 0.0.6)
+      parser (>= 2.2.3.0, < 3.0)
+      powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
-      ruby-progressbar (~> 1.4)
-    ruby-progressbar (1.6.0)
-    simplecov (0.9.1)
+      ruby-progressbar (~> 1.7)
+    ruby-progressbar (1.7.5)
+    simplecov (0.10.0)
       docile (~> 1.1.0)
-      multi_json (~> 1.0)
-      simplecov-html (~> 0.8.0)
-    simplecov-html (0.8.0)
+      json (~> 1.8)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     slop (3.6.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.7)
+  bundler
   pry
-  rake (~> 10.0)
+  rake
   rspec
   rubocop
   simplecov
   tracinho!
+
+BUNDLED WITH
+   1.10.6
