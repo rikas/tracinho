@@ -15,7 +15,7 @@ module Tracinho
     #  ComplementBuilder.new(Word.new('passa-mos')).build
     #  # => #<Tracinho::Word:0x007f8a9b10f270 @text="passamos">
     def build
-      text = @word.hyphenated? ? remove_dash(@word.text) : add_dash(@word.text)
+      text = @word.hyphenated? ? remove_dash(@word.to_s) : add_dash(@word.to_s)
 
       Word.new(text)
     end

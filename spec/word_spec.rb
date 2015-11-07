@@ -24,7 +24,7 @@ describe Word do
 
       complement = word.complement
 
-      expect(complement.text).to eq('fizeste')
+      expect(complement.to_s).to eq('fizeste')
     end
   end
 

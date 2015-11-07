@@ -1,13 +1,11 @@
 module Tracinho
   class Word
-    attr_accessor :text
-
     def initialize(text)
-      self.text = text
+      @text = text
     end
 
     def hyphenated?
-      text.include?('-')
+      @text.include?('-')
     end
 
     def complement
@@ -15,10 +13,11 @@ module Tracinho
     end
 
     def grammar_class
+      WordClassifier.new(self).full_classification
     end
 
     def to_s
-      text
+      @text
     end
   end
 end

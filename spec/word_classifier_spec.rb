@@ -31,7 +31,6 @@ describe WordClassifier do
     context 'for irregular verbs' do
       it 'correctly returns the verb of the word' do
         irregular_words.each_with_index do |word, index|
-          puts word
           classifier = described_class.new(Word.new(word))
 
           expect(classifier.verb).to eq(irregular_verbs[index])
