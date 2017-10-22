@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'tracinho'
+
+include Tracinho
+
+require 'pry'
+Pry.start
