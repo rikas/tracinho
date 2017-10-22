@@ -1,2 +1,15 @@
 Metrics/LineLength:
   Max: 100
+
+# We have a lot of portuguese examples in the comments so...
+Style/AsciiComments:
+  Enabled: false
+
+# The default (10) is too litle
+Metrics/MethodLength:
+  Max: 15
+
+# Blocks in spec files get big
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Tracinho
   # WordClassifier is the responsible for classifying a word. It gives the verb, the verb tense and
   # the full classification of a Word.
@@ -28,7 +30,7 @@ module Tracinho
     #
     #   classifier = Tracinho::WordClassifier.new(word)
     #   classifier.full_classification
-    #   # => "Conjugação pronominal reflexa da segunda pessoa do presente do indicativo do verbo matar."
+    #   # => "Conjugação pronominal reflexa da segunda pessoa do presente do indicat..."
     def full_classification
       case @word.to_s
       when /ste$/

@@ -1,21 +1,23 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe WordClassifier do
   describe 'verb' do
     let(:regular_words) do
-      %w(bebemos comesse mijaste cagou-se passa-mos cala-te matas-te conhecer-te morde-mos mata-te)
+      %w[bebemos comesse mijaste cagou-se passa-mos cala-te matas-te conhecer-te morde-mos mata-te]
     end
 
     let(:regular_verbs) do
-      %w(beber comer mijar cagar passar calar matar conhecer morder matar)
+      %w[beber comer mijar cagar passar calar matar conhecer morder matar]
     end
 
     let(:irregular_words) do
-      %w(vamos somos fomos)
+      %w[vamos somos fomos]
     end
 
     let(:irregular_verbs) do
-      %w(ir ser ser)
+      %w[ir ser ser]
     end
 
     context 'for regular verbs' do
@@ -51,7 +53,7 @@ describe WordClassifier do
       ]
     end
 
-    %w(mijaste bebesse conhecemos busca-mos).each_with_index do |word, index|
+    %w[mijaste bebesse conhecemos busca-mos].each_with_index do |word, index|
       it "correctly returns the full classification of the word '#{word}'" do
         classifier = described_class.new(Word.new(word))
 

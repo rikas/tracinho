@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Tracinho
   # ComplementBuilder converts words with dash in the version without it and vice-versa.
   class ComplementBuilder
@@ -21,15 +23,15 @@ module Tracinho
     private
 
     def remove_dash(text)
-      text.match(/\-se$/) ? text.tr('-', 's') : text.delete('-')
+      text.match?(/\-se$/) ? text.dup.tr('-', 's') : text.dup.delete('-')
     end
 
     def add_dash(text)
       case text
       when /os$/
-        text.insert(-4, '-')
+        text.dup.insert(-4, '-')
       else
-        text.insert(-3, '-')
+        text.dup.insert(-3, '-')
       end
     end
   end

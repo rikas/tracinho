@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'tracinho/version'
 require 'tracinho/complement_builder'
 require 'tracinho/word'

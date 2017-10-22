@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe ComplementBuilder do
-  let(:hyphenated) { %w(passa-mos cala-te matas-te conhecer-te morde-mos mata-te) }
-  let(:not_hyphenated) { %w(passamos calate mataste conhecerte mordemos matate) }
+  let(:hyphenated) { %w[passa-mos cala-te matas-te conhecer-te morde-mos mata-te] }
+  let(:not_hyphenated) { %w[passamos calate mataste conhecerte mordemos matate] }
 
   describe '#build' do
     it 'complements hyphenated words correctly' do
