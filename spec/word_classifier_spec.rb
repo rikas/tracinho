@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 describe WordClassifier do
   describe 'verb' do
     let(:regular_words) do
