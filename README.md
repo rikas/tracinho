@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/rikas/tracinho.svg)](https://travis-ci.org/rikas/tracinho) [![Dependency Status](https://gemnasium.com/rikas/tracinho.svg)](https://gemnasium.com/rikas/tracinho) [![Code Climate](https://codeclimate.com/github/rikas/tracinho/badges/gpa.svg)](https://codeclimate.com/github/rikas/tracinho)
+[![Build Status](https://travis-ci.org/rikas/tracinho.svg)](https://travis-ci.org/rikas/tracinho)
+[![Code Climate](https://codeclimate.com/github/rikas/tracinho/badges/gpa.svg)](https://codeclimate.com/github/rikas/tracinho)
 
 tracinho
 ========
