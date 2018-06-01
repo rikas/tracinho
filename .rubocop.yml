@@ -13,3 +13,7 @@ Metrics/MethodLength:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**'
+
+# We want to support older versions of ruby
+Style/ExpandPathArguments:
+  Enabled: false
