@@ -15,6 +15,9 @@ module Tracinho
   #  Tracinho.pair?(w1, w2)
   #  # => true
   def self.pair?(word1, word2)
+    word1 = Word.new(word1) unless word1.is_a?(Word)
+    word2 = Word.new(word2) unless word2.is_a?(Word)
+
     word1.complement.to_s == word2.to_s
   end
 
