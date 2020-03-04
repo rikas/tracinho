@@ -18,7 +18,7 @@ module Tracinho
   #   classifier.full_classification
   #   # => "Segunda pessoa do singular do pretérito perfeito do indicativo do verbo comer."
   class WordClassifier
-    ENDINGS = /(?:(ste)|(sse)|[^-](mos)|(-(se|mos))|[^s](-te)|(s-te))$/ #:nodoc:
+    ENDINGS = /(?:(ste)|(sse)|[^-](mos)|(-(se|mos))|[^s](-te)|(s-te))$/.freeze #:nodoc:
 
     def initialize(word)
       @word = word

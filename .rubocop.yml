@@ -1,4 +1,4 @@
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
 
 # We have a lot of portuguese examples in the comments so...
