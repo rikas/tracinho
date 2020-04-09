@@ -30,6 +30,8 @@ module Tracinho
       case text
       when /os$/
         text.dup.insert(-4, '-')
+      when /sse$/
+        text.dup.gsub(/sse/, '-se')
       else
         text.dup.insert(-3, '-')
       end

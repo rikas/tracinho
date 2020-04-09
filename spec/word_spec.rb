@@ -26,6 +26,14 @@ describe Word do
 
       expect(complement.to_s).to eq('matas-te')
     end
+
+    it 'works for double S words' do
+      word = described_class.new('mandasse')
+
+      complement = word.complement
+
+      expect(complement.to_s).to eq('manda-se')
+    end
   end
 
   describe '#grammar_class' do

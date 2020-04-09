@@ -19,10 +19,10 @@ describe Tracinho do
     end
 
     it 'works with strings or Tracinho::Word objects' do
-      w1 = Tracinho::Word.new('fizeste')
-      w2 = 'fizes-te'
-      w3 = 'fizeste'
-      w4 = Tracinho::Word.new('fizes-te')
+      w1 = Tracinho::Word.new('mandasse')
+      w2 = 'manda-se'
+      w3 = 'arrotas-te'
+      w4 = Tracinho::Word.new('arrotaste')
 
       expect(described_class.pair?(w1, w2)).to be_truthy
       expect(described_class.pair?(w4, w3)).to be_truthy

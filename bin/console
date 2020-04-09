@@ -1,10 +1,11 @@
-# frozen_string_literal: true
 #!/usr/bin/env ruby
+
+# frozen_string_literal: true
 
 require 'bundler/setup'
 require 'tracinho'
 
-include Tracinho
+send(:include, Tracinho)
 
 require 'pry'
 Pry.start
