@@ -10,7 +10,5 @@ require 'tracinho'
 require 'rspec'
 
 RSpec.configure do |config|
-  include Tracinho
-
   config.order = 'random'
 end

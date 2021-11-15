@@ -5,6 +5,7 @@ module Tracinho
   class ComplementBuilder
     def initialize(word)
       @word = word
+      @complement = nil
     end
 
     # Builds the complementary word.
@@ -15,25 +16,27 @@ module Tracinho
     #  ComplementBuilder.new(Word.new('passa-mos')).build
     #  # => #<Tracinho::Word:0x007f8a9b10f270 @text="passamos">
     def build
-      text = @word.hyphenated? ? remove_dash(@word.to_s) : add_dash(@word.to_s)
+      @complement = @word.to_s
 
-      Word.new(text)
+      Word.new(@word.hyphenated? ? remove_dash : add_dash)
     end
 
     private
 
-    def remove_dash(text)
-      text.match?(/\-se$/) ? text.dup.tr('-', 's') : text.dup.delete('-')
+    def remove_dash
+      @complement.match?(/-se$/) ? @complement.tr('-', 's') : @complement.delete('-')
     end
 
-    def add_dash(text)
-      case text
+    def add_dash
+      @complement = @complement.dup
+
+      case @complement
       when /os$/
-        text.dup.insert(-4, '-')
+        @complement.insert(-4, '-')
       when /sse$/
-        text.dup.gsub(/sse/, '-se')
+        @complement.gsub(/sse/, '-se')
       else
-        text.dup.insert(-3, '-')
+        @complement.insert(-3, '-')
       end
     end
   end

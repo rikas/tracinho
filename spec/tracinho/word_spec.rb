@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-describe Word do
+describe Tracinho::Word do
   let(:hyphenated) { %w[passa-mos cala-te matas-te conhecer-te morde-mos mata-te] }
   let(:not_hyphenated) { %w[passamos calate mataste conhecerte mordemos matate] }
 
   describe '#hyphenated?' do
     it 'returns true if the word has a hyphen' do
       hyphenated.each do |w|
-        expect(described_class.new(w).hyphenated?).to be_truthy
+        expect(described_class.new(w)).to be_hyphenated
       end
     end
 
     it 'returns false if the word does not have a hyphen' do
       not_hyphenated.each do |w|
-        expect(described_class.new(w).hyphenated?).to be_falsey
+        expect(described_class.new(w)).not_to be_hyphenated
       end
     end
   end

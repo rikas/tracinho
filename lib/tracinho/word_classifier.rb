@@ -18,8 +18,6 @@ module Tracinho
   #   classifier.full_classification
   #   # => "Segunda pessoa do singular do pretérito perfeito do indicativo do verbo comer."
   class WordClassifier
-    ENDINGS = /(?:(ste)|(sse)|[^-](mos)|(-(se|mos))|[^s](-te)|(s-te))$/.freeze #:nodoc:
-
     def initialize(word)
       @word = word
     end
@@ -47,16 +45,7 @@ module Tracinho
     end
 
     def verb
-      endings = @word.to_s.match(ENDINGS).captures.compact
-
-      verb = @word.to_s.sub(endings.first, 'r')
-      verb.sub!(/rr$/, 'r')
-      verb.sub!(/our$/, 'ar')
-
-      # Irregular verbs that got bad guesses
-      verb = verb.sub(/^var$/, 'ir').sub(/^sor$/, 'ser').sub(/^for$/, 'ser')
-
-      verb
+      VerbGuess.new(@word).guess
     end
 
     def verb_tense

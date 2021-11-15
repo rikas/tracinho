@@ -1,6 +1,0 @@
-language: ruby
-rvm:
-  - 2.6.7
-  - 2.7.3
-script: bundle exec rspec
-sudo: false

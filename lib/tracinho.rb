@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'tracinho/version'
+require 'tracinho/verb_guess'
 require 'tracinho/complement_builder'
 require 'tracinho/word'
 require 'tracinho/word_classifier'
@@ -14,11 +15,11 @@ module Tracinho
   #
   #  Tracinho.pair?(w1, w2)
   #  # => true
-  def self.pair?(word1, word2)
-    word1 = Word.new(word1) unless word1.is_a?(Word)
-    word2 = Word.new(word2) unless word2.is_a?(Word)
+  def self.pair?(first, second)
+    first = Word.new(first) unless first.is_a?(Word)
+    second = Word.new(second) unless second.is_a?(Word)
 
-    word1.complement.to_s == word2.to_s
+    first.complement.to_s == second.to_s
   end
 
   class << self
