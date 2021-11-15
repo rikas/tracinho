@@ -40,8 +40,9 @@ jobs:
       - name: Run RSpec
         run: bundle exec rspec
 
-      - name: Run Rubocop
-        run: bundle exec rubocop --format github -c .rubocop.yml
+      # This doesn't work
+      #- name: Run Rubocop
+      #  run: bundle exec rubocop --format github -c .rubocop.yml
 
       - name: Run Reek
         run: bundle exec reeek
