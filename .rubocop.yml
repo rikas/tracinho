@@ -1,14 +1,14 @@
-require:
-  - rubocop-performance
-  - rubocop-rspec
-  - rubocop-rake
-
 AllCops:
   TargetRubyVersion: 2.5
   NewCops: enable
   Exclude:
     - 'pkg/**/*'
     - 'coverage/**/*'
+
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rake
 
 Layout/LineLength:
   Max: 100
