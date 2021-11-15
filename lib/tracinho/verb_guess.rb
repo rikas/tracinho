@@ -10,7 +10,9 @@ module Tracinho
   #   guesser.guess
   #   # => "comer"
   class VerbGuess
-    ENDINGS = /(?:(ste)|(sse)|[^-](mos)|(-(se|mos))|[^s](-te)|(s-te))$/.freeze #:nodoc:
+    ENDINGS = /(?:(ste)|(sse)|[^-](mos)|(-(se|mos))|[^s](-te)|(s-te))$/.freeze
+
+    private_constant :ENDINGS
 
     def initialize(word)
       @word = word.to_s.downcase

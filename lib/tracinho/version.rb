@@ -4,4 +4,6 @@
 # name from a word and gives the full grammar classification of the verb.
 module Tracinho
   VERSION = '0.1.7'
+
+  public_constant :VERSION
 end

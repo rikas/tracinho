@@ -9,7 +9,7 @@ require 'tracinho/version'
 Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.5.0'
   spec.name          = 'tracinho'
-  spec.version       = Tracinho::VERSION
+  spec.version       = ::Tracinho::VERSION
   spec.authors       = ['Ricardo Otero']
   spec.email         = ['oterosantos@gmail.com']
   spec.summary       = 'Tracinho.com gem.'

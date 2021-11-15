@@ -5,7 +5,7 @@
 require 'bundler/setup'
 require 'tracinho'
 
-send(:include, Tracinho)
+public_send(:include, Tracinho)
 
 require 'pry'
 Pry.start
